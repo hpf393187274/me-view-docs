@@ -4,7 +4,8 @@
     "docs:build": "vuepress build docs"
   },
   "dependencies": {
-    "me-view": "^1.0.37"
+    "me-view": "^1.0.42",
+    "vuepress-plugin-container": "^2.1.0"
   },
   "devDependencies": {
     "vuepress": "^1.2.0"

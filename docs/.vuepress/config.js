@@ -1,5 +1,12 @@
 module.exports = {
   pageClass: '',
+  plugins: [
+    ['vuepress-plugin-container', {
+      type: 'demo',
+      before: info => `<demo-block> <template #info>${info}</template> `,
+      after: '</demo-block>'
+    }]
+  ],
   head: [
     ['link',
       { rel: 'stylesheet', href: '//at.alicdn.com/t/font_1180504_ol37traisu.css' }
@@ -95,16 +102,18 @@ module.exports = {
           {
             title: 'Layout 布局', collapsable: false,
             children: [
-              { title: 'Table 表格', path: '/zh/layout/table' },
-              { title: 'Paging 分页', path: '/zh/layout/paging' },
-              { title: 'Tree 树型控件', path: '/zh/layout/tree' },
-              { title: 'Transfer 穿梭框', path: '/zh/layout/transfer' }
+
             ]
           },
           {
             title: 'View 视图', collapsable: false,
             children: [
-              { title: 'Dialog 对话框', path: '/zh/view/dialog' }
+              { title: 'Table 表格', path: '/zh/view/table' },
+              { title: 'Paging 分页', path: '/zh/view/paging' },
+              { title: 'Tree 树型控件', path: '/zh/view/tree' },
+              { title: 'Transfer 穿梭框', path: '/zh/view/transfer' },
+              { title: 'Dialog 对话框', path: '/zh/view/dialog' },
+              { title: 'Message 消息框', path: '/zh/view/message' }
             ]
           }
         ]
